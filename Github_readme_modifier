@@ -1,0 +1,92 @@
+import pyautogui
+import time
+from datetime import date
+import pyperclip
+
+# Point(x=46, y=275)
+# Point(x=460, y=81)
+# Point(x=268, y=250)
+# Point(x=1668, y=359)
+# Point(x=134, y=804)
+# Point(x=95, y=533)
+
+# Point(x=319, y=561)
+# Point(x=375, y=582)
+# Point(x=428, y=609)
+# Point(x=280, y=632)
+# Point(x=118, y=678)
+# Point(x=1847, y=404)
+# Point(x=1201, y=860)
+
+today = date.today()
+dates = today.strftime('%d')
+
+if int(dates)%2 == 0:
+    science = "quantum physics"
+    informatic = "Blender and js"
+    dream = "be good enough in code to get a good job for my CV"
+    info_college = "that's pretty easy"
+    phrase_de_fin = " One day I ill be a good coder."
+    end = "This code has been changed by my code."
+else:
+    science = "arithmetics"
+    informatic = "Python and Java"
+    dream = "having a lot of skills to be someone that you can be proud of"
+    info_college = "that's pretty boring"
+    phrase_de_fin = " One day I'll be a good scientist;"
+    end = "This code has been changed by my program."
+
+def get_pos():
+    while (True):
+        time.sleep(2)
+        print(pyautogui.position())
+        
+def write():
+    pyperclip.copy(":")
+    pyautogui.hotkey('ctrl', 'v')   
+
+def github_shortway():
+    pyautogui.moveTo(46, 275, 2)
+    pyautogui.doubleClick()
+    time.sleep(2)
+    pyautogui.moveTo(460, 81)
+    pyautogui.click()
+    pyautogui.write("https")
+    write()
+    pyautogui.write("//github.com/ooo-dev-code")
+    pyautogui.press("Enter")
+    time.sleep(2)
+    pyautogui.moveTo(1668, 359)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.moveTo(95, 533)
+    pyautogui.click()
+    time.sleep(1)
+    pyautogui.moveTo(319, 561)
+    for i in range(15):
+        pyautogui.hotkey("ctrl", "x")
+    pyautogui.write("-> Hi I'm ooo-dev-code                                             ")
+    pyautogui.press("Enter")
+    pyautogui.write(f"-> I'm have a big passion in {science}                          ")
+    pyautogui.press("Enter")
+    pyautogui.write(f"-> I'm currently learning {informatic}                                    ")
+    pyautogui.press("Enter")
+    pyautogui.write(f"-> I'm trying to {dream}                                              ")
+    pyautogui.press("Enter")
+    pyautogui.write(f"-> I'm in college and {info_college}                             ")
+    pyautogui.press("Enter")
+    pyautogui.write(f"-> Fun fact: I have made a code who write a new readme everyday so I can get 1 contribution per day at least                                 ")
+    pyautogui.press("Enter")
+    pyautogui.press("Enter")
+    pyautogui.write(f"I just started this github account and I started python since 2-3 months. I'm sorry if my codes aren't very good but I'm trying my best.{phrase_de_fin}                                                    ")
+    pyautogui.press("Enter")
+    pyautogui.write(f"-> My wish is to get an ingeneer level in codage in 2027 maximum.                                                ")
+    pyautogui.press("Enter")
+    pyautogui.press("Enter")
+    pyautogui.write(f"-> Thank you for reading this page.{end}                                                      ")
+    pyautogui.moveTo(1847, 404)
+    pyautogui.click()
+    pyautogui.moveTo(1201, 860)
+    pyautogui.click()
+    
+github_shortway()

@@ -34,7 +34,7 @@ else:
     dream = "having a lot of skills to be someone that you can be proud of"
     info_college = "that's pretty boring"
     phrase_de_fin = " One day I'll be a good scientist;"
-    end = "This code has been changed by my program."
+    end = "This code has been changed by my program say hi to my not really bot"
 
 def get_pos():
     while (True):
